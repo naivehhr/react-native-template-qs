@@ -8,7 +8,7 @@ import {
   View,
   TouchableHighlight,
 } from 'react-native';
-
+import * as CounterActions from '../actions/counter';
 class Counter extends Component {
 
   componentDidMount() {
@@ -16,8 +16,7 @@ class Counter extends Component {
   }
 
   _increment = () => {
-    const { login } = this.props
-    login()
+    this.props.dispatch(CounterActions.increment())
   }
   render() {
     const { 
