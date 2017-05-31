@@ -1,9 +1,9 @@
 import {CounterApp} from './app/'
 const routes = {
 	CounterApp: { 
-		screen: MyAccount,
+		screen: CounterApp,
 		navigationOptions: {
-			title: '计数器'
+			title: 'Counter'
 		}
 	},
 }
