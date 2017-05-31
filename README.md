@@ -1,7 +1,9 @@
-# react-native-template-redux_temp
+# react-native-template-qs
  
+ redux
+ react-navigation 
  ### Usage
 
 ```
-react-native init Demo --template redux_temp
+react-native init Demo --template qs
 ```
