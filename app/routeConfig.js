@@ -1,4 +1,4 @@
-import {CounterApp} from './app/'
+import {CounterApp} from './index'
 const routes = {
 	CounterApp: { 
 		screen: CounterApp,

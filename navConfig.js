@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import {View} from 'react-native'
 import { addNavigationHelpers } from 'react-navigation';
-import Routes from './routeConfig'
+import Routes from './app/routeConfig'
 import {connect} from 'react-redux'
 import { 
 	StackNavigator, 
