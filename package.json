@@ -1,6 +1,6 @@
 {
-  "name": "react-native-template-redux_temp",
-  "version": "0.0.3",
+  "name": "react-native-template-qs",
+  "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/naivehhr/react-native-template-redux_temp.git"
+    "url": "git+https://github.com/naivehhr/react-native-template-qs.git"
   },
   "author": "aran.hu",
   "license": "ISC"
