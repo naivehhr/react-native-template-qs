@@ -1,11 +1,8 @@
 import React, {Component} from 'react'
 import {View} from 'react-native'
-import { addNavigationHelpers } from 'react-navigation';
+import { StackNavigator, addNavigationHelpers, NavigationActions } from 'react-navigation';
 import Routes from './app/routeConfig'
 import {connect} from 'react-redux'
-import { 
-	StackNavigator, 
- } from 'react-navigation'
 
 const AppNavigator = StackNavigator({
     ...Routes
@@ -16,10 +13,17 @@ const AppNavigator = StackNavigator({
 		}
 	}
 });
-
-const initialState = AppNavigator.router
-.getStateForAction(AppNavigator.router.getActionForPathAndParams('CounterApp'));
-
+// 这样配置有问题 https://github.com/react-community/react-navigation/issues/1357 在配合是TabNavigation时候
+// const initialState = AppNavigator.router.getStateForAction(AppNavigator.router.getActionForPathAndParams('CounterApp'));
+// 暂如下配置
+const initialNavState=AppNavigator.router.getStateForAction(NavigationActions.reset({
+	index: 0,
+	actions: [
+	  NavigationActions.navigate({
+		routeName: 'Home',
+	  }),
+	],
+}))
 export const navReducer = (state = initialState, action) => {
   const nextState = AppNavigator.router.getStateForAction(action, state);
   return nextState || state;
