@@ -24,7 +24,7 @@ const initialNavState=AppNavigator.router.getStateForAction(NavigationActions.re
 	  }),
 	],
 }))
-export const navReducer = (state = initialState, action) => {
+export const navReducer = (state = initialNavState, action) => {
   const nextState = AppNavigator.router.getStateForAction(action, state);
   return nextState || state;
 };
